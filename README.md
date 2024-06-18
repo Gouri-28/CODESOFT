@@ -1,1 +1,8 @@
-# CODESOFT
+This project involves predicting the survival of passengers on the Titanic using a logistic regression model. The process begins by importing essential libraries for data manipulation (pandas, numpy), visualization (matplotlib, seaborn), and machine learning (sklearn). The Titanic dataset is loaded into a DataFrame named data, and the first few rows are displayed to get an initial overview. We then obtain a concise summary and statistical information of the dataset to understand its structure and contents.
+
+To handle missing values, we check for any null entries and fill the missing Age values with the median age and the Embarked values with the most common port (mode). The Cabin column is dropped due to a high proportion of missing values, while the Ticket and Name columns are dropped as they provide limited information for prediction purposes.
+
+Next, we convert categorical variables into numerical values. The Sex column is mapped to binary values (0 for male and 1 for female), and the Embarked column is converted into dummy variables, with the first category dropped to avoid multicollinearity. After cleaning and preprocessing the data, we define the features (X) and the target variable (y), splitting the dataset into training and testing sets using an 80-20 split with train_test_split.
+
+Standardization of feature variables is performed using StandardScaler to ensure they have zero mean and unit variance. We then initialize and train the logistic regression model with the training data. Predictions are made on the test set, and the model's performance is evaluated by calculating the accuracy, generating a confusion matrix, and creating a classification report. Finally, the confusion matrix is visualized using a heatmap from seaborn for better understanding.
+
